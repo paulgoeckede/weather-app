@@ -45,6 +45,5 @@ export default async function filterData(city) {
     description: data.weather[0].description,
     time: getLocalTime(data),
   };
-  console.log(weather);
   return weather;
 }

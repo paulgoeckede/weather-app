@@ -59,80 +59,19 @@ export default function generateCard(data) {
 }
 
 export function generateBackground(data) {
-  switch (data.time) {
-    case 22:
-    case 23:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-      container.className = "";
-      container.classList.add("stars");
-      break;
-    case 7:
-      container.className = "";
-      container.classList.add("g7");
-      break;
-    case 8:
-      container.className = "";
-      container.classList.add("g8");
-      break;
-    case 9:
-      container.className = "";
-      container.classList.add("g9");
-      break;
-    case 10:
-      container.className = "";
-      container.classList.add("g10");
-      break;
-    case 11:
-      container.className = "";
-      container.classList.add("g11");
-      break;
-    case 12:
-      container.className = "";
-      container.classList.add("g12");
-      break;
-    case 13:
-      container.className = "";
-      container.classList.add("g13");
-      break;
-    case 14:
-      container.className = "";
-      container.classList.add("g14");
-      break;
-    case 15:
-      container.className = "";
-      container.classList.add("g15");
-      break;
-    case 16:
-      container.className = "";
-      container.classList.add("g16");
-      break;
-    case 17:
-      container.className = "";
-      container.classList.add("g17");
-      break;
-    case 18:
-      container.className = "";
-      container.classList.add("g18");
-      break;
-    case 19:
-      container.className = "";
-      container.classList.add("g19");
-      break;
-    case 20:
-      container.className = "";
-      container.classList.add("g20");
-      break;
-    case 21:
-      container.className = "";
-      container.classList.add("g21");
-      break;
-    default:
-      break;
+  const { time } = data;
+  if (time > 21 || time < 6) {
+    container.className = "";
+    container.classList.add("stars");
+  } else if (time > 5 && time < 10) {
+    container.className = "";
+    container.classList.add("g6");
+  } else if (time > 9 && time < 18) {
+    container.className = "";
+    container.classList.add("g11");
+  } else if (time > 17 && time < 22) {
+    container.className = "";
+    container.classList.add("g19");
   }
 }
 
